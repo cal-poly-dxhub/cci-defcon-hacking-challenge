@@ -8,7 +8,7 @@ The following web services were taken advantage of to form this solution:
 - AWS Step Functions
 
 ### Amazon API Gateway
-The schema for the API gateway used within this solution is available [here](api_gateway_def.json). 
+The schema for the API gateway used within this solution is available [here](backend/api_gateway_def.json). 
 
 ### AWS Lambda
 1. accessRooms
