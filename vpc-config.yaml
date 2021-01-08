@@ -1,0 +1,121 @@
+AWSTemplateFormatVersion: 2010-09-09 
+Description: CCIC DEFCON App VPC fitted with public subnets to host EC2 instances for a competition application.
+
+Resources: 
+  VPC: 
+    Type: AWS::EC2::VPC 
+    Properties: 
+      CidrBlock: 10.0.0.0/16 
+      EnableDnsSupport: true 
+      EnableDnsHostnames: true 
+      InstanceTenancy: default 
+      Tags: 
+      - Key: Name
+        Value: ccicDefconAppVPC
+
+  # InternetGateway Setup
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+
+  VPCGatewayAttachment:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+       VpcId: !Ref VPC
+       InternetGatewayId: !Ref InternetGateway
+
+  # Establish Public Subnet 
+  PublicSubnet1: 
+    Type: AWS::EC2::Subnet 
+    Properties: 
+      VpcId: !Ref VPC 
+      CidrBlock: 10.0.20.0/22
+      MapPublicIpOnLaunch: true 
+      AvailabilityZone: "us-west-2a" 
+      Tags: 
+      - Key: Name 
+        Value: !Join ['', ['PublicSubnet1 - ', !Ref 'AWS::StackName'] ] 
+      - Key: SubnetType 
+        Value: Public 
+  
+  PublicSubnet2: 
+    Type: AWS::EC2::Subnet 
+    Properties: 
+      VpcId: !Ref VPC 
+      CidrBlock: 10.0.40.0/22
+      MapPublicIpOnLaunch: true 
+      AvailabilityZone: "us-west-2b" 
+      Tags: 
+      - Key: Name 
+        Value: !Join ['', ['PublicSubnet2 - ', !Ref 'AWS::StackName'] ] 
+      - Key: SubnetType 
+        Value: Public 
+  
+  PublicSubnet3:
+   Type: AWS::EC2::Subnet
+   Properties:
+     VpcId: !Ref VPC
+     CidrBlock: 10.0.60.0/22
+     MapPublicIpOnLaunch: true
+     AvailabilityZone: "us-west-2c"
+     Tags:
+     - Key: Name
+       Value: !Join ['', ['PublicSubnet3 - ', !Ref 'AWS::StackName'] ]
+     - Key: SubnetType
+       Value: Public
+
+  PublicSubnet4:
+   Type: AWS::EC2::Subnet
+   Properties:
+     VpcId: !Ref VPC
+     CidrBlock: 10.0.80.0/22
+     MapPublicIpOnLaunch: true
+     AvailabilityZone: "us-west-2d"
+     Tags:
+     - Key: Name
+       Value: !Join ['', ['PublicSubnet4 - ', !Ref 'AWS::StackName'] ]
+     - Key: SubnetType
+       Value: Public
+
+  # Public Route/RouteTable
+  DefaultPublicRoute:
+    Type: AWS::EC2::Route
+    DependsOn: VPCGatewayAttachment
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+
+  PublicRouteTable:
+     Type: AWS::EC2::RouteTable
+     Properties:
+       VpcId: !Ref VPC
+       Tags:
+         - Key: Name
+           Value: !Join ['', ['PublicRouteTable - ', !Ref 'AWS::StackName'] ]
+         - Key: Network
+           Value: Public
+
+  # Public Subnet RouteTable Association
+  PublicSubnet1RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      SubnetId: !Ref PublicSubnet1
+
+  PublicSubnet2RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      SubnetId: !Ref PublicSubnet2
+
+  PublicSubnet3RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      SubnetId: !Ref PublicSubnet3
+
+  PublicSubnet4RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      SubnetId: !Ref PublicSubnet4

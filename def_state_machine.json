@@ -1,0 +1,17 @@
+{
+  "Comment": "Dynamic wait state to execute a lambda function.",
+  "StartAt": "WaitPeriod",
+  "States": {
+    "WaitPeriod": {
+      "Type": "Wait",
+      "SecondsPath": "$.waitPeriod",
+      "Next": "TerminateInstance"
+    },
+    "TerminateInstance": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:::function:ec2Manager",
+      "InputPath": "$",
+      "End": true
+    }
+  }
+}
