@@ -1,0 +1,178 @@
+/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
+body {
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5em;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+footer,
+header,
+section,
+main {
+    display: block;
+}
+a {
+    color: #BD8B13; /* Cal Poly Gold */
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+a:active,
+a:hover {
+    outline-width: 0;
+}
+img {
+    border-style: none;
+    max-width: 100%;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+button {
+    font: inherit;
+    margin: 0;
+    text-transform: none;
+}
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+::-webkit-input-placeholder {
+    color: hsla(0, 0%, 100%, 0.4);
+    font-style: italic;
+}
+::-moz-placeholder {
+    color: hsla(0, 0%, 100%, 0.4);
+    font-style: italic;
+}
+:-ms-input-placeholder {
+    color: hsla(0, 0%, 100%, 0.4);
+    font-style: italic;
+}
+.site-header {
+    position: relative;
+    background-color: #000;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+@media screen and (min-width: 75em) {
+    .site-header:after {
+        background: -webkit-linear-gradient(top, transparent, rgba(21, 71, 52, 0.85) 99%, rgba(21, 71, 54, 0.85));
+        background: linear-gradient(180deg, transparent 0, rgba(21, 71, 52, 0.85) 99%, rgba(21, 71, 54, 0.85));
+        content: "";
+        height: 3rem;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+.section-title-dark {
+    font-family: abolition, sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 2.5rem;
+    color: #BD8B13; /* Cal Poly Gold */
+    line-height: 1.25em;
+    margin: 0;
+}
+.section-subtitle-dark {
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 2rem;
+    color: #C69214; /* Cal Poly Gold */
+    line-height: 1.25em;
+    font-style: italic;
+}
+.section-title-light {
+    font-family: abolition, sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 2.5rem;
+    color: #154734; /* Cal Poly Green */
+    line-height: 1.25em;
+    margin: 0;
+}
+.section-subtitle-light {
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 2rem;
+    color: #C69214; /* Cal Poly Gold */
+    line-height: 1.25em;
+    font-style: italic;
+}
+@media screen and (min-width: 40em) {
+    .section-title-dark,
+    .section-title-light {
+        font-size: 3.25rem;
+        line-height: 1em;
+    }
+    .section-subtitle-dark,
+    .section-subtitle-light {
+        font-size: 3rem;
+        line-height: 1em;
+    }
+}
+@media screen and (min-width: 64em) {
+    .section-title-dark,
+    .section-title-light {
+        font-size: 4rem;
+        line-height: 1em;
+    }
+    .section-subtitle-dark,
+    .section-subtitle-light {
+        font-size: 1.5rem;
+        line-height: 1em;
+    }
+}
+.home-dark {
+    background: #154734; /* Cal Poly Green */
+    color: #fff;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.home-light {
+    background: #fff;
+    color: #54585A; /* Cal Poly Dark Gray */
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.dark-button,
+.light-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-decoration: none;
+    font-family: Source Sans Pro, sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    border-radius: 1.25rem;
+    padding: 0.3rem 1.5rem;
+    background-color: transparent;
+}
+.dark-button {
+    border: 2px solid #8E9089; /* Cal Poly Light Gray */
+    color: #BD8B13; /* Cal Poly Gold */
+}
+.light-button {
+    border: 2px solid #BD8B13; /* Cal Poly Gold */
+    color: #154734; /* Cal Poly Green */
+}
+.site-footer {
+    background: #000;
+    text-align: center;
+    color: #fff;
+    font-size: 1.25rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+@media screen and (min-width: 40em) {
+    .site-footer {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+.menu-links {
+  text-decoration: none;
+}
