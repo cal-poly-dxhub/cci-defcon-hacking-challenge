@@ -1,0 +1,20 @@
+input,
+select,
+option {
+  padding: 0.5em;
+  font-size: 1rem;
+  border-radius: 1.25rem;
+  padding: 0.3rem 1.5rem;
+  background-color: #8E9089; /* Cal Poly Light Gray */
+  outline: none;
+}
+.full-width {
+  width: 100%;
+}
+.Signup-normal {
+  padding-top: 1em;
+}
+.Signup-error {
+  font: bold;
+  color: #BD8B13; /* Cal Poly Gold */
+}

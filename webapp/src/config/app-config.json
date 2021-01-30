@@ -1,0 +1,16 @@
+{
+    "region": "us-west-2",
+    "userPool": "us-west-2_fKDCUSExp",
+    "userPoolBaseUri": "https://login.cacyber.net",
+    "clientId": "uisrfpcc477noboiue8v0oa8k",
+    "callbackUri": "http://localhost:3000/callback",
+    "signoutUri": "http://localhost:3000/signout",
+    "tokenScopes": [
+        "openid",
+        "email",
+        "profile"                
+    ],
+    "apiUri": "https://ojgur37yvi.execute-api.us-west-2.amazonaws.com/test/ec2",
+    "signupUri": "https://ojgur37yvi.execute-api.us-west-2.amazonaws.com/test/user",
+    "baseUri": "https://mos0yandy5.execute-api.us-west-2.amazonaws.com/prod/"
+}

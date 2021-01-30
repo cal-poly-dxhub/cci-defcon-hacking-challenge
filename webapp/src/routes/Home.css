@@ -1,0 +1,64 @@
+/*.Home {
+  text-align: center;
+}
+
+.Home-logo {
+  width: 25%;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.Home-header {
+  background-color: white;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.Home-link {
+  color: #154734;
+}*/
+
+.Home-api-response {
+  margin-top: 14px;
+  background-color: white;
+  display: inline-block;
+  font-family: 'Lucida Console', monospace
+}
+
+/*@keyframes Home-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}*/
+
+.Home-details {
+  margin-top: 2em;
+  font-size: 12px;
+}
+/*.Home-details-strong {
+  margin-top: 2em;
+  font-size: 14px;
+  font: bold;
+  font-family: 'Lucida Console', monospace
+
+}
+.Home-details a {
+  color: #61dafb;
+}
+.Home-details-links {
+  text-align: left;
+  display: inline-block;
+}*/

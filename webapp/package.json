@@ -1,0 +1,64 @@
+{
+  "name": "defcon-signup",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "DEFCON Registration.",
+  "homepage": ".",
+  "author": {
+    "name": "Darren Kraker",
+    "email": "dkraker@calpoly.edu",
+    "url": "https://cpe453.calpoly.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git-codecommit.us-west-2.amazonaws.com/v1/repos/ec2-manager"
+  },
+  "dependencies": {
+    "amazon-cognito-auth-js": "^1.3.2",
+    "amazon-cognito-identity-js": "^3.0.14",
+    "aws-sdk": "^2.498.0",
+    "axios": "^0.19.2",
+    "email-validator": "^2.0.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-google-recaptcha": "^2.1.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.4.1",
+    "react-select": "^3.1.0",
+    "react-select-country-list": "^2.2.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync ./build/. s3://welcometocci2020.cacyber.net --profile cci"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
