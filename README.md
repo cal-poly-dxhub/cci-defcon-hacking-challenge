@@ -40,9 +40,9 @@ Matches the request body to codes present within a DynamoDB table.
 Part of the architecture of this application includes strict cost-management. Based on a pre-defined time period (X seconds), any EC2 instances launched through the ec2Manager have a timer set on them with AWS Step Functions. A call to ec2Manager (only performed by AWS Step Functions) to terminate the instance is delayed by X seconds while the user has access to their instance in the meantime.
 
 ### AWS Sumerian Scenes
-You can download an export of all the Sumerian scenes here<br>
-[Clean Room!](https://dxhub-static.calpoly.edu/media/defcon-sumerian/clean_room-gltf.zip)
-[Control Room!](https://dxhub-static.calpoly.edu/media/defcon-sumerian/control_room-gltf.zip)
-[Court Room!](https://dxhub-static.calpoly.edu/media/defcon-sumerian/court_room-gltf.zip)
-[Crash Site!](https://dxhub-static.calpoly.edu/media/defcon-sumerian/crash_site-gltf.zip)
-[Office Space!](https://dxhub-static.calpoly.edu/media/defcon-sumerian/office_space-gltf.zip)
+You can download an export of all the Sumerian scenes here<br/>
+[Clean Room](https://dxhub-static.calpoly.edu/media/defcon-sumerian/clean_room-gltf.zip)<br/>
+[Control Room](https://dxhub-static.calpoly.edu/media/defcon-sumerian/control_room-gltf.zip)<br/>
+[Court Room](https://dxhub-static.calpoly.edu/media/defcon-sumerian/court_room-gltf.zip)<br/>
+[Crash Site](https://dxhub-static.calpoly.edu/media/defcon-sumerian/crash_site-gltf.zip)<br/>
+[Office Space](https://dxhub-static.calpoly.edu/media/defcon-sumerian/office_space-gltf.zip)<br/>
